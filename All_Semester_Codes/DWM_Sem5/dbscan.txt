@@ -1,0 +1,38 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df=pd.read_csv("D:/Engineering_codes/D12B_01_Sanjana Asrani/sem_5/DWM/Mall_Customers_dataset.csv")
+df.head() tail shape
+df=df.iloc[:,[3,4]].values
+# srf annual income & spending score wala col liya
+df
+plt.scatter(df[:,0],df[:,1],s=10,c="black")  ## [:,0] means all rows of index 1 col->annual income col , s=size of dots
+
+# finding optimal no of clusters using elbow method (kmeans) then performing the dbscan algo
+from sklearn.cluster import KMeans
+wcss=[]
+for i in range(1,11):  # 10 tak hi
+        kmeans=KMeans(n_clusters=i, init='k-means++', max_iter=300, n_init=10 )
+        kmeans.fit(df)
+        wcss.append(kmeans.inertia_)
+plt.plot(range(1,11),wcss)
+plt.title("The Elbow Method")
+plt.xlabel("No. of clusters")
+plt.ylabel("wcss")
+plt.show()
+from sklearn.cluster import DBSCAN
+dbscan=DBSCAN(eps=5,min_samples=5)
+labels=dbscan.fit_predict(df)
+np.unique(labels)
+plt.scatter(df[labels==-1,0],df[labels==-1,1],s=10,c="black")  # noise in black color
+
+plt.scatter(df[labels==0,0],df[labels==0,1],s=10,c="red")
+plt.scatter(df[labels==1,0],df[labels==1,1],s=10,c="green")
+plt.scatter(df[labels==2,0],df[labels==2,1],s=10,c="blue")
+plt.scatter(df[labels==3,0],df[labels==3,1],s=10,c="yellow")
+plt.scatter(df[labels==4,0],df[labels==4,1],s=10,c="brown")
+
+plt.xlabel("Annual Income")
+plt.xlabel("Spending Score")
+plt.show()
