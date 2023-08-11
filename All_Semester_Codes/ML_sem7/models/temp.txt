@@ -1,0 +1,1 @@
+this folder contains various ml models, mostly made for learning and practicing purpose. Sorry if there's any errors found :) Happy Learning!!!
