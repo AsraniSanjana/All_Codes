@@ -1,0 +1,137 @@
+<input type="text" id="name">
+<div id="msg"></div> 
+
+
+<div id="box" value="box"></div>
+<input type="button" id="btn1hide" value="hide">
+<input type="button" id="btn1show" value="show">
+<input type="button" id="btn1toggle" value="toggle"><hr><br><br>
+
+<img src="https://tse3.mm.bing.net/th?id=OIP.rJ3HQ9a_FG00QWZ4M5cA_AAAAA&pid=Api&P=0" id="bulbimg"></div>
+<input type="button" id="turnon" value="turn on">
+<input type="button" id="turnoff" value="turn off">
+
+<hr><br><br>
+<input type="button" id="btnappend" value="append">
+<input type="button" id="btnprepend" value="prepend">
+
+<hr><hr>
+<br><br>
+
+<!-- <input type="button" id="removeappended" value="removeappended"> -->
+
+
+<div id="res"></div>
+<div id="res2"></div>
+
+<table border="1" id="table">
+    <tr id="tr1">
+        <td>sanjana</td>
+    </tr>
+
+</table>
+<style>
+    #box{
+        background-color: purple;
+        width:100px;
+        height:100px;
+    }
+    #res{
+        background-color: aqua;
+    }
+    #res2{
+        background-color:aquamarine;
+    }
+</style>
+<!-- <script src="js/jquery-3.6.0.min.js" ></script> -->
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<p>
+    <script>
+    console.log(jQuery('#box').css('background-color'));
+    </script>
+    </p>
+<script>
+tr_id=1;
+
+jQuery('#name').keyup(function(){
+    name=jQuery('#name').val();
+
+if(name==""){ 
+    jQuery('#msg').html("empty field");
+    jQuery('#msg').css("background-color","orange");
+}
+else { 
+    jQuery('#msg').html("welcome "+name);
+    jQuery('#msg').css(
+        {
+        "background-color":"blue",
+        "font-size":"20px",
+        "text-align":"center"
+        }
+        );
+}
+});
+
+// ..................................................
+
+jQuery('#btn1hide').click(function(){
+jQuery('#box').hide(2000);
+// jQuery('#box').fadeOut(2000);
+// jQuery('#box').slideUp(2000);
+
+});
+jQuery('#btn1show').click(function(){
+jQuery('#box').show(2000);
+
+});
+
+
+jQuery('#btn1toggle').click(function(){
+// jQuery('#box').toggle(2000);
+// jQuery('#box').fadeToggle(2000);
+jQuery('#box').slideToggle(2000);
+
+});
+
+
+jQuery("#turnon").click(function(){
+
+    jQuery('#bulbimg').attr("src",'https://tse3.mm.bing.net/th?id=OIP.Q4hqQlRrNaWOOoWxFNcp3QAAAA&pid=Api&P=0');
+
+});
+
+
+jQuery("#turnoff").click(function(){
+
+jQuery('#bulbimg').attr("src",'https://tse3.mm.bing.net/th?id=OIP.rJ3HQ9a_FG00QWZ4M5cA_AAAAA&pid=Api&P=0');
+
+});
+
+
+jQuery("#btnappend").click(function(){
+    tr_id++;
+name=$("#name").val();
+jQuery('#res').append(name);
+html="<tr><td>"+name+"</td></tr>";
+// html="<tr id=tr"+tr_id+"><td>"+name+"</td></tr>";
+jQuery('#table').append(html);
+
+
+});
+
+jQuery("#btnprepend").click(function(){
+
+name=$("#name").val();
+jQuery('#res2').prepend(name);
+
+});
+
+
+
+// jQuery("#removeappended").click(function(){
+
+
+// jQuery('#table').remove($('#tr1'));
+
+// });
+</script>

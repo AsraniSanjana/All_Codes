@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // program to create a two dimensional array
+
+function twoDimensionArray(a, b) {
+    let arr = [];
+
+    // creating two dimensional array
+    for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+            arr[i] = [];
+        }
+    }
+
+    // inserting elements to array
+    for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+            arr[i][j] = j;
+        }
+    }
+    return arr;
+}
+
+const x = 2;
+const y = 3;
+
+const result = twoDimensionArray(x, y);
+// console.log(result);
+
+for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+           document.write(arr[i][j]+" ")
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

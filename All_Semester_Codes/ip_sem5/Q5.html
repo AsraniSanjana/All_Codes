@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+p {
+  text-align: center;
+  color: rgb(8, 77, 66);
+}
+#para1 {
+  text-align: center;
+  color: red;
+}
+.center {
+  text-align: center;
+  color: purple;
+}
+p.center {
+  text-align: center;
+  color: green;
+}
+/* only <p> elements with class="center" will be red and center-aligned: */
+* {
+  text-align: center;
+  color: blue;
+}
+
+h1, h2, p {
+  text-align: center;
+  color: rgb(8, 49, 11);
+}
+
+
+div p{/*Selects all <p> element inside all <div> elements	*/
+}
+p:first-child {
+  background-color: yellow;
+}
+/* CSS [attribute] Selector */
+/* CSS [attribute="value"] Selector */
+/* CSS [attribute~="value"] Selector */
+/* CSS [attribute^="value"] Selector  starts with */
+/* CSS [attribute$="value"] Selector ends with */
+/* CSS [attribute*="value"] Selector contains */
+/*  */
+
+a[target="_blank"] {   /* jinke paas target blank attribute hai unko apply kar css yeh */
+  background-color: yellow;
+}
+[title~="flower"] {
+  border: 5px solid yellow;
+}
+
+
+[class$="test"] {
+  background: yellow;
+}
+p:nth-child(odd) {
+  background: red;
+}
+
+[class*="te"] {
+  background: yellow;
+}
+div:nth-child(2) {
+  background: red;
+}
+/* :nth-child(n) selector matches every element that is the nth child of its parent.
+
+n can be a number, a keyword (odd or even), or a formula (like an + b).
+
+Tip: Look at the :nth-of-type() selector to select the element that is the nth child, of the same type (tag name), of its parent. */
+p:nth-child(3n-1) {
+  background: red;
+}
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

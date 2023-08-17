@@ -1,0 +1,106 @@
+<!-- action , method , target -->
+
+<!-- readonly vs. disabled -->
+
+<!-- hidden field , file field , buttons , fieldsets(legend) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        p{
+            text-decoration:underline;
+            color:red;
+            font-size: large
+        }
+        legend{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+<form>
+    <fieldset>
+      <legend>Personal details form</legend>
+
+        <!-- LABEL -->
+        <label for="name"> Enter your name </label>
+        <!-- TEXT -->
+        <input type="text" id="name" name="name" value="Sanjana Asrani"> 
+        <hr>
+        <!-- RADIO BTN -> name same -->
+        <p> favorite front end language</p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <hr>
+        <!-- CHECK BOX -->
+        <p> Your symptoms</p>
+        <input type="checkbox" id="fever" name="fever" value="fever">
+        <label for="vehicle1"> I have a fever</label><br>
+        <input type="checkbox" id="cold" name="cold" value="cold">
+        <label for="vehicle2"> I have cold</label><br>
+        <input type="checkbox" id="cough" name="cough" value="cough">
+        <label for="vehicle2"> I have cough</label><br>
+        <hr>
+        <!-- SUBMIT BTN -->
+        <input type="submit" value="Submit">Submit type  <br>
+        <input type="button" value="Submit">button type <br>
+        <button type="button" value="Submit" onclick="alert('Form Submitted')">Click Me!</button>
+        <hr>
+        <!-- DROP DOWN LIST : single select -->
+        <label for="country">Choose a country:</label>
+        <select id="country" name="country" size="3" multiple>
+        <option value="india">india</option>
+        <option value="china" selected>china</option>
+        <option value="korea">korea</option>
+        <option value="japan">japan</option>
+        </select>
+        <hr>
+        <!-- DROP DOWN LIST : multi select -->
+        <label for="cars">Choose your fav car:</label>
+        <select id="cars" name="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        </select>
+        <hr>
+        <!-- TEXTAREA -->
+        <p>type something here</p>
+        <textarea name="message" rows="10" cols="30"> Give your feedback</textarea>
+        <hr>
+        <!-- DATALIST -->
+        <P>browsers youve used</P>
+        <input list="browsers">
+        <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+        </datalist>
+        <hr>
+        <!-- input types -->
+        <input type="color">choose the color <hr>
+        <input type="email">type your email    <hr>
+        <input type="number">enter your number <hr>
+        <input type="password"> enter your password<hr>
+        <input type="range"> select a range<hr>
+        <input type="reset"><hr>
+        <input type="search">search something <hr>
+        <input type="time">select time <hr>
+
+
+     </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+
+<student>
+<personal_details>
+<name>sanjana<name>
+<address>home<address>
+<mobile>8830762370<mobile>
+<email>sanjanavasrani@gmail.com<email>
+</personal_details>
+
+<personal_details>
+<name>amrita<name>
+<address>home<address>
+<mobile>1798723782<mobile>
+<email>amritavasrani@gmail.com<email>
+</personal_details>
+
+</student>

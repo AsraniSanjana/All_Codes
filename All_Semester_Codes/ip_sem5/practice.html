@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+	</script>
+</head>
+
+<body>
+	<select id="animals">
+		<option value="dog">Dog</option>
+		<option value="cat">Cat</option>
+		<option value="lion">Rabbit</option>
+		<option value="human">Human</option>
+	</select>
+	
+<p>
+		You have selected:
+		<span id="selected"></span>
+	</p>
+
+	<p id="correct"></p>
+
+
+	<button id="submit">See result</button>
+	<script>
+		$(document).ready(function () {
+			var ans=9;
+            
+			let chosen = "Your answer is: ";
+			$("#submit").click(function () {
+				const vals =
+					$("#animals").find(
+						"option:selected"
+					).text();
+                    if (vals=="Human"){ans="correct";}
+				$("#correct").text(ans);
+				$("#selected").text(vals);
+			});
+		});
+	</script>
+</body>
+
+</html>
+
+
+
+  <!-- <a href="https://tse3.mm.bing.net/th?id=OIP.znDCI066A_wSk9-oUfVdRAHaHa&pid=Api&P=0">
+        
+    <img src="https://tse3.mm.bing.net/th?id=OIP.znDCI066A_wSk9-oUfVdRAHaHa&pid=Api&P=0"> </a> -->

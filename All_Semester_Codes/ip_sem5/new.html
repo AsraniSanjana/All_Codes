@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          p:nth-child(odd) {
+  background: red;
+}
+
+p:nth-child(even) {
+  background: lightgreen;
+}
+
+span div{
+    background:yellow;
+}
+
+div span{
+    background:blueviolet;
+    /* span inside div  */
+}
+
+    </style>
+</head>
+<body>
+    <p>para1</p>
+    <p>para2</p>
+    <p>para3</p>
+
+
+    <div>
+        <span>span inside div</span>
+    </div>
+
+    <span>
+        <div>
+            div inside span
+        </div>
+
+        <div>
+            <p><b><a href="www.google.com"></a></b></p>
+        </div>
+    </span>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <p id="text">abcde</p>
+    
+    <p id="result"></p>
+    
+    <script>
+
+        let text = document.getElementById("text").innerHTML;
+        const pattern = /e/;
+
+        //TEST METHOD : RETURN TRUE IF PATTERN FOUND
+        document.getElementById("result").innerHTML = pattern.test(text);
+
+
+    </script>
+
+    <script>
+
+        //EXEC METHOD : RETURNS THE MATCHED PART
+        var str = "D12B1_SANJANA ASRANI_D12B1";  
+        var obj = new RegExp( "D12B","g" );  
+        //document.writeln(obj);  //             /D12B/g
+        // var obj = new RegExp( "AMRITA", "g" );   // returns null since there is no intersection between str & AMRITA
+        var res = obj.exec(str);  
+        document.writeln(res+"<br>");
+        
+
+</script>
+
+<script>
+
+let n = "sanjana_asrani".search("rani");
+document.writeln(n+"<br>");  //10 se rani start horay
+
+n = "sAnjana_Asrani".search(/n/i);
+document.writeln(n+"<br>"); //2
+
+
+result = "SAnjanA is older than amrita".replace("sanjana", "dinesh");
+document.writeln(result+"<br>"); // wont do anything
+
+
+result = "SAnjanA is older than amrita".replace(/sanjana/i, "dinesh");
+document.writeln(result+"<br>"); 
+
+
+</script>
+</body>
+</html>

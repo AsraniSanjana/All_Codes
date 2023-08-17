@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let arr = [
+        //     [2,1,3],
+        //     [4,2,4]];
+    
+        
+        
+            // arr[0][0]=prompt("enter 1st element:");
+    // i<console.log(arr.length);//2
+    // j<console.log(arr[0].length);//3
+
+    var a=prompt("enter no of rows");
+    var b=prompt("enter no of cols");
+    // let arr = [[],[]];
+    let arr = [];
+
+    for (let i = 0; i< a; i++) {
+        for(let j = 0; j< b; j++) {
+            arr[i] = [];
+        }
+    }
+
+
+            for (let i = 0; i< arr.length; i++) {
+            for(let j = 0; j< arr[0].length; j++) {
+                arr[i][j]=prompt("enter element:");
+            }
+        }
+
+    for (let i = 0; i<arr.length; i++) {
+            for(let j = 0; j<arr[0].length; j++) {
+               document.write(arr[i][j]+" ")
+            }
+            document.write("<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

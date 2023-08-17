@@ -1,0 +1,99 @@
+<!-- text align on article means text align on section inside the article too -->
+<html>
+<head>
+<style>
+  *{
+        text-align:center;
+    }
+
+header,footer{
+    width:100%;
+    background-color:black;
+    color:white;
+    /* margin-left:20px; */
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+.container{
+    background-color:yellowgreen;
+}
+nav {
+    color:white;
+    background-color :darkblue;
+    height:6%;
+    margin-left:25px;
+    margin-right:25px;  /* end of the screen width tak touch na kare jaise*/
+    padding:20px;  /*thoda mota hojayega block */
+    
+} 
+/* aside is rhs wala container */
+/* article is lhs wala container with many sections inside */
+aside {font-size:30px;background-color:grey; height:40%;width:35%;float:right;margin-right:25px;margin-top:0px;} 
+section{font-size:30px;background-color:white;width:95%; padding:5px;margin-right:15px;margin-left:15px;}
+/* section ka margin left means article ke block se 20px; not from lhs screen */
+article{font-size:30px;background-color:grey;width:60%;margin-left:25px}
+
+.navbar ul{
+    display: flex; /*  IMP  */
+    /* align-items: center; */
+    justify-content: center;
+    margin-left:20px
+}
+
+.navbar ul li{
+    margin-left: 20PX;
+}
+a{
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+
+<header>Header</header>
+<!-- <nav>navigation bar</nav> -->
+
+
+<nav class="navbar">
+    <ul type="none">
+        <li><a class="active" href="#home">home</a></li>
+        <li><a href="#protect">protect</a></li>
+        <li><a href="#symtoms">symptoms</a></li>
+        <li><a href="#prevent">prevent</a></li>
+        <li><a href="#handwash">handwash</a></li>
+        <li><a href="#spread">spread</a></li>
+        <li><a href="#news">Recent News</a></li>
+      
+        
+       
+    </ul>
+</nav>
+
+
+<br>
+<aside>aside</aside>
+
+
+<article><b>article1</b><br>
+
+<section>section1</section> <br>
+<section>section2</section> <br>
+
+</article>
+
+<br>
+
+<article><b>article2</b>
+<section>
+section
+</section><br></article>
+
+
+<footer>footer</footer>
+
+</div>
+</body></html>
