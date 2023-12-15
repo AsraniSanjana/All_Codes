@@ -1,4 +1,4 @@
-# waterjug
+# waterjug (to be run in SWI-prolog as a .pl file
 
         fill(x,y).
     fill(2,0):-nl,
