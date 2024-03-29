@@ -1,1 +1,23 @@
 https://youtu.be/9ADd-_mM5Dw?feature=shared
+
+
+the .vscode folder with spark folder has a settings.json file like this:
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "sanj-first",
+            "database": "my-db-name",
+            "username": "root",
+            "connectionTimeout": 30,
+            "password": ""
+        }
+    ]
+}
