@@ -1,0 +1,11 @@
+make sure youre inside the directory dc_01 and greet_client.py, greet_server.py and the protos folder are in the folder dc_01. 
+
+now run the cmd: python3 -m grpc_tools.protoc -I protos --python_out=. --grpc_python_out=. protos/greet.proto
+
+this creates 2 files:
+greet_pb2_grpc.py and greet_pb2 in the same folder as the greet server and client files.
+
+now start the server with: python greet_server.py
+and then the client with: python greet_client.py
+
+running these creates a pycache inside the dc_01 folder with the protos folder.
