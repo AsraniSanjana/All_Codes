@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package example;
+
+message Request {
+    string parameter1 = 1;
+    string parameter2 = 2;
+}
+
+message Response {
+    string message = 1;
+}
+
+service MyService {
+    rpc MyMethod (Request) returns (Response);
+    rpc GetCPUUtilization(Empty) returns (CPUUtilization);
+}
+
+message Empty {}
+
+message CPUUtilization {
+    float percent = 1;
+}
