@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutopsyCase>
+  <SchemaVersion>6.0</SchemaVersion>
+  <CreatedDate>2024/03/30 03:33:15 (IST)</CreatedDate>
+  <ModifiedDate>2024/03/30 03:33:38 (IST)</ModifiedDate>
+  <CreatedByAutopsyVersion>4.21.0</CreatedByAutopsyVersion>
+  <SavedByAutopsyVersion>4.21.0</SavedByAutopsyVersion>
+  <Case>
+    <Name>case01_20240330_033315</Name>
+    <DisplayName>CASE01</DisplayName>
+    <Number>1</Number>
+    <Examiner>SANJANA ASRANI</Examiner>
+    <ExaminerPhone>8830762370</ExaminerPhone>
+    <ExaminerEmail>sanjanavasrani@gmail.com</ExaminerEmail>
+    <CaseNotes/>
+    <CaseType>Single-user case</CaseType>
+    <Database/>
+    <CaseDatabase>autopsy.db</CaseDatabase>
+    <TextIndex/>
+  </Case>
+  <ContentProvider>
+    <Name/>
+  </ContentProvider>
+  <OriginalCase/>
+</AutopsyCase>

@@ -1,0 +1,44 @@
+﻿Created By AccessData® FTK® Imager 4.7.1.2 
+
+Case Information: 
+Acquired using: ADI4.7.1.2
+Case Number: case_no_01
+Evidence Number: evidence_no_01
+Unique Description: 
+Examiner: d17b1
+Notes:  
+
+--------------------------------------------------------------
+
+Information for D:\sanj_df_imgs\sanj_img:
+
+Physical Evidentiary Item (Source) Information:
+[Device Info]
+ Source Type: Logical
+[Drive Geometry]
+ Bytes per Sector: 512
+ Sector Count: 15,723,520
+[Physical Drive Information]
+ Removable drive: True
+ Source data size: 7677 MB
+ Sector count:    15723520
+[Computed Hashes]
+ MD5 checksum:    638732718d5a1e6c9461f2c05f74618b
+ SHA1 checksum:   7805b8aa1de870f04e4e53d4d78e567f8376673b
+
+Image Information:
+ Acquisition started:   Sun Jan 28 23:59:46 2024
+ Acquisition finished:  Mon Jan 29 00:09:00 2024
+ Segment list:
+  D:\sanj_df_imgs\sanj_img.001
+  D:\sanj_df_imgs\sanj_img.002
+  D:\sanj_df_imgs\sanj_img.003
+  D:\sanj_df_imgs\sanj_img.004
+  D:\sanj_df_imgs\sanj_img.005
+  D:\sanj_df_imgs\sanj_img.006
+
+Image Verification Results:
+ Verification started:  Mon Jan 29 00:09:02 2024
+ Verification finished: Mon Jan 29 00:10:48 2024
+ MD5 checksum:    638732718d5a1e6c9461f2c05f74618b : verified
+ SHA1 checksum:   7805b8aa1de870f04e4e53d4d78e567f8376673b : verified
