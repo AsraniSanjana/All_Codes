@@ -1,0 +1,86 @@
+hash in linux: md5sum filename.ext
+hash in windows: certutil -hashfile filename.ext, certutil -hashfile filename.txt MD5
+
+dd file: https://dftt.sourceforge.net/
+
+vmdk file: qemu-img convert -O vmdk imagefile.dd vmdkname.vmdk
+
+fdisk-l | grep /dev/sd*
+dir /dev/sd*
+dd if=/dev/sdX of=/path/to/output/image.dd bs=4M
+dcfldd if=/dev/sdX of=/path/to/output/image.dd hash=md5,sha256 bs=4M
+
+volatality cmds:
+---------------------------------------------
+git clone https://github.com/volatilityfoundation/volatility3.git
+cd Downloads
+pip3 install -r requirements.txt
+python3 vol.py -h
+download the challenge.raw : https://drive.usercontent.google.com/download?id=1bER4wmHP_LAMgdB52LGkb8x2Mf8hG3V
+6&export=download
+
+Python3 vol.py -f filename.raw imageinfo
+python3 vol.py -f <filename.raw> windows.pslist
+python3 vol.py -f <filename.raw> windows.netscan > output.txt
+python3 vol.py -f <filename.raw>-o randomfoldername windows.dumpfiles --pid 3016 > output_dump.txt
+python3 vol.py -f <filename> windows.malfind
+
+recycle bin:
+-----------------------------
+$I parser download: https://df-stream.com/download/321/
+
+cd \$Recycle.bin 
+dir /a
+whoami /user 
+cd sid
+dir /a 
+copy $IYRV4HN.JPG G:\DF_TOOLS\I_Parse_v1.1\RecoveredData
+
+$I File: This file contains metadata about the deleted file, including its
+original name, full path, size, and deletion timestamp.
+● $R File: The $R file contains the actual contents of the deleted file. It serves
+as the key for data recovery, as it holds the raw data of the deleted file.
+
+
+carving
+------------------
+sudo apt-get install foremost
+foremost -v -t all -i image.dd -o Recovered
+nano /etc/scalpel/scalpel.conf
+scalpel -o ScalpelRecovered SANJ_COPY-OF-VMDK.dd
+recoverjpeg EvidenceDD
+
+usb
+--------------------
+MountPoints2 → This key will record which user was logged into Windows
+when a specific USB device was connected
+1. USB Device History in Windows Registry:
+● HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR:
+This registry key contains information about USB storage devices previously
+connected to the system. It includes details such as the vendor ID, product
+ID, device serial number, and timestamps of device connections. The
+presence of each entry in this key indicates a unique USB storage device that
+has been plugged into the system.
+● HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices: The
+MountedDevices subkey stores drive letter allocations, which map USB
+device serial numbers to specific drive letters or volumes that were mounted
+during device insertion. This mapping provides insights into the drive letters
+assigned to USB devices and their corresponding serial numbers.
+● HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Expl
+orer\MountPoints2: This registry key records user accounts associated with
+connected USB devices. It contains information about which user was
+logged into Windows when a specific USB device was connected, along
+with timestamps indicating the last write time for each device entry.
+● HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\Usb: This
+registry key holds technical information about connected USB devices,
+including hardware details and timestamps of device connections. It
+provides additional insights into the configuration and characteristics of
+USB devices connected to the system
+
+Automating Forensic Analysis: Tools like USBDeview
+For Windows 10: \Windows\inf\setupapi.upgrade.log   Identifying First Connection Time:
+
+
+sniffer or tappers in nw
+packet capture files
+ip.src == 192.168.1.158 && ip.dst==192.168.1.159
