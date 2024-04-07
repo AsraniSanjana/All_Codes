@@ -1,0 +1,51 @@
+cust_location,cust_religion,cust_age,cust_gender,cust_bill,feedback,mode-of-payment,Delivery-Takeaway,shipping-address,delivery_status,order_status,ordered_items,order_date,delivery_date,payment_status,cancel_reason,refund_reason
+New York,Buddhism,22,Other,48.39,Needs improvement in packaging.,Cash,Delivery,"319 Ramirez Locks Apt. 095
+Lake Michaelland, DE 59767",reached,refund-requested,"item5, item10",2024-03-10,2024-03-14,Paid,,Product didn't meet expectations
+Phoenix,Christianity,63,Other,14.36,Flipkart foes it better ngl,Cash,Delivery,"2387 Rojas Plaza
+North Cassandrastad, MT 62799",reached,successful,"item6, item4",2024-03-20,2024-03-23,Paid,,
+Los Angeles,Sikhism,70,Female,85.17,Below Expectations. Worse than ever.,Credit Card,Takeaway,,,successful,"item7, item2",2024-03-17,,Paid,,
+Chicago,Hinduism,36,Male,35.8,Below Expectations. Worse than ever.,Online Payment,Takeaway,,,cancelled,"item2, item3",2024-04-01,,Failed,Didn't like the product,
+Houston,Buddhism,79,Female,82.86,Flipkart foes it better ngl,Credit Card,Takeaway,,,cancelled,"item4, item3",2024-03-28,,Paid,Found better deal elsewhere,
+Philadelphia,Hinduism,41,Other,22.76,No one can beat amazon,Debit Card,Delivery,"724 Valerie Common
+Randallland, NJ 76000",reached,updated,"item10, item5, item2",2024-04-03,2024-04-10,Failed,,
+Los Angeles,Christianity,44,Male,16.95,Below Expectations. Worse than ever.,Debit Card,Delivery,"932 Owens Stravenue Apt. 579
+North Susan, NE 95975",reached,refund-requested,"item2, item1, item5",2024-04-02,2024-04-08,Failed,,Product didn't meet expectations
+Los Angeles,Judaism,62,Male,60.32,Flipkart foes it better ngl,Cash,Takeaway,,,cancelled,"item4, item2, item1",2024-03-13,,Pending,Didn't like the product,
+Philadelphia,Judaism,77,Other,73.82,Copying dmart???,Credit Card,Delivery,"465 Johnson Inlet
+New Scottshire, AR 27955",reached,updated,item8,2024-03-25,2024-03-30,Paid,,
+Houston,Hinduism,55,Male,56.85,Degrading Service,Debit Card,Delivery,"458 Eric Prairie Apt. 264
+Lake Michaelstad, NC 36232",reached,cancelled,item3,2024-03-25,2024-04-02,Paid,Found better deal elsewhere,
+Los Angeles,Christianity,27,Other,83.33,Can speed up the process.,Online Payment,Takeaway,,,refund-requested,"item1, item7, item6",2024-03-27,,Failed,,Product didn't meet expectations
+Phoenix,Hinduism,30,Other,23.45,No one can beat amazon,Online Payment,Delivery,"0861 Edward Road
+Melissaside, NJ 08853",reached,cancelled,"item10, item3, item2",2024-03-12,2024-03-15,Paid,Product was damaged,
+Los Angeles,Judaism,26,Other,78.91,Flipkart foes it better ngl,Online Payment,Delivery,"9265 Rogers Isle Apt. 496
+Smithmouth, WY 81311",reached,refund-requested,"item5, item2, item10",2024-03-21,2024-03-27,Failed,,Received wrong item
+Phoenix,Christianity,60,Other,56.49,thrift copy of amazon lol ,Debit Card,Delivery,"6246 Megan Light
+Russellside, NY 99429",reached,updated,"item1, item7",2024-04-01,2024-04-10,Failed,,
+Chicago,Islam,75,Female,72.1,Can speed up the process.,Debit Card,Delivery,"2011 Smith Mission
+East Codystad, NE 94612",reached,updated,"item8, item3",2024-03-22,2024-03-24,Pending,,
+Houston,Christianity,46,Other,86.89,Would love it if delivery was faster.,Cash,Takeaway,,,updated,"item7, item3",2024-03-27,,Failed,,
+Houston,Hinduism,56,Female,27.44,Copying dmart???,Credit Card,Delivery,"79314 Kristen Stream Apt. 917
+Theresatown, CO 00598",reached,updated,"item3, item10, item4",2024-03-21,2024-03-27,Failed,,
+Houston,Sikhism,28,Female,48.5,Copying dmart???,Cash,Takeaway,,,successful,"item6, item5",2024-03-20,,Pending,,
+Chicago,Hinduism,77,Female,28.26,Degrading Service,Debit Card,Delivery,"8468 Dylan Rapids Apt. 446
+South Janet, PR 05968",reached,refund-requested,"item4, item6, item9",2024-03-12,2024-03-19,Failed,,Received wrong item
+Houston,Judaism,57,Other,14.96,Can speed up the process.,Debit Card,Delivery,"02331 Andrew Neck
+Edwardtown, IL 65785",reached,cancelled,item1,2024-03-20,2024-03-30,Paid,Changed my mind,
+Chicago,Buddhism,70,Female,74.28,No one can beat amazon,Online Payment,Delivery,"1235 Jackson Forest Apt. 826
+Port Michele, OR 39466",reached,updated,"item1, item8, item6",2024-03-27,2024-04-01,Paid,,
+Houston,Judaism,80,Male,86.3,Copying dmart???,Debit Card,Delivery,"Unit 0371 Box 5706
+DPO AA 17541",reached,cancelled,"item4, item7, item9",2024-03-23,2024-04-02,Pending,Product was damaged,
+Phoenix,Judaism,65,Male,92.44,thrift copy of amazon lol ,Credit Card,Delivery,"283 Samuel Knolls Suite 185
+New Kimberly, IA 45476",reached,refund-requested,"item10, item7, item3",2024-03-15,2024-03-18,Pending,,Item was defective
+New York,Islam,47,Male,24.46,thrift copy of amazon lol ,Online Payment,Delivery,"PSC 3778, Box 1579
+APO AP 90302",reached,cancelled,"item5, item8",2024-03-18,2024-03-27,Paid,Changed my mind,
+Chicago,Christianity,46,Male,43.26,thrift copy of amazon lol ,Online Payment,Takeaway,,,refund-requested,item8,2024-03-09,,Pending,,Product didn't meet expectations
+New York,Buddhism,56,Other,80.36,Flipkart foes it better ngl,Cash,Takeaway,,,updated,"item1, item6",2024-04-01,,Paid,,
+Philadelphia,Buddhism,52,Other,27.68,Overall satisfied with the experience.,Online Payment,Takeaway,,,cancelled,"item6, item2",2024-03-17,,Paid,Changed my mind,
+Chicago,Islam,75,Male,95.65,Needs improvement in packaging.,Credit Card,Delivery,"8633 Everett Cove
+Fishertown, CA 69095",reached,cancelled,"item10, item6, item5",2024-04-04,2024-04-14,Pending,Found better deal elsewhere,
+Chicago,Buddhism,50,Male,92.47,Good customer service.,Cash,Delivery,"291 Freeman Crossroad Apt. 302
+Camachomouth, GU 53634",reached,refund-requested,"item2, item7, item5",2024-03-09,2024-03-15,Pending,,Product didn't meet expectations
+Houston,Judaism,35,Other,28.19,Overall satisfied with the experience.,Online Payment,Delivery,"5895 Dillon Expressway
+North Allisonview, AK 36946",reached,updated,"item8, item9",2024-03-23,2024-03-26,Failed,,
