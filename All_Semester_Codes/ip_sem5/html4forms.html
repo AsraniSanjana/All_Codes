@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>html 4</title>
+</head>
+<body>
+    <div>
+        <!-- form tag is used to take input from user 
+            user input:
+           1. input element: text box,check box,radio button,button.we also have a file type
+           2. textarea:defines a multiline text input cols and rows attributes can be used to size the textarea 
+            -->
+            <h1>detail filling form</h1>
+        <form >
+            <input type="textbox" dir=rtl placeholder="type here" style="color:rebeccapurple" 
+            tabindex=2>  
+<input type="text" placeholder="enter your name" tabindex=1> <br>
+<h1 title= "welcome to my diy webpage"
+   style= "color:pink">sanjana's 1st webpage
+</h1>
+<p>where did u travel recently</p> <br>
+manila
+<input type="radio" value="section m" name="section x" tabindex=3>m <br>
+<!-- default tabindex is all elements sequentially -->
+himachal
+<input type="radio" value="section b">h <br>
+assam
+<input type="radio" value="section c">a  <br>
+<!-- id ek html tag element ka unique identifier hota h -->
+<label for="selectionid">
+    <input type="radio" value="value of rbutton 1" name="section" id="selectionid">section a
+    <!-- instead od writing id="idforb1" -->
+    <input type="radio" value="value of rbutton 2" name="section" id="idofrb2">section b
+    <!-- if name of more than 1 radio buttons is same , only one of them can be selected at once -->
+</label>
+<br>
+<input type="text"  value="enter your password"> <br>
+<input type="password"> <br> <!--  dont give a value to a password type input -->
+<input type="date"> <br>
+<input type="file"> <br>
+<input type="submit"> <br>
+
+<input type="checkbox" name="ramyeon" id="r" class="yellow"> ramyeon
+<input type="checkbox" name="jajangmyeon" id="j" class="brown">jajangmyeon
+<br>
+ <!-- button,checkbox,color,date,datetime-local,email,file,hidden -->
+<!-- id aur label for=" " same daalna -->
+<textarea name="explain" id="explain" cols="30" rows="10" placeholder="enter your name"></textarea> <br>
+select a car
+<select name="car"  id="car">
+    
+    <option value="car1">OMNI</option>
+    <option value="car2">HONDA</option>
+    <option value="car3">MERCIDES</option>
+</select>
+</form>
+ </div>
+</body>
+</html>
