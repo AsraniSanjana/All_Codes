@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sabHK</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  background: #171c24;
+  position: fixed;
+  width: 100%;
+}
+.wrapper nav{
+  position: relative;
+  display: flex;
+  max-width: calc(100% - 200px);
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .content{
+  display: flex;
+  align-items: center;
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+}
+.content .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #323c4e;
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 70px;
+  text-align: center;
+}
+.wrapper .menu-icon{
+  display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
+}
+
+.wrapper .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  background: #171c24;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #f2f2f2;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #171c24;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+  display: none;
+}
+
+/* Dropdown Menu code start */
+.content .links ul{
+  position: absolute;
+  background: #171c24;
+  top: 80px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 70px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+
+/* Responsive code start */
+@media screen and (max-width: 1250px){
+  .wrapper nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .wrapper .search-box input{
+    padding: 0 100px 0 15px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .wrapper .menu-icon{
+    display: block;
+  }
+  .wrapper #show-menu:checked ~ .menu-icon i::before{
+    content: "\f00d";
+  }
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #14181f;
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul{
+    max-height: 100vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .wrapper nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 27px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .wrapper .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .wrapper .search-box input{
+    padding-right: 30px;
+  }
+}
+
+.dummy-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  padding: 0 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.dummy-text h2{
+
+  font-size: 45px;
+  margin: 5px 0;
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+ 
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">bbb</a></div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Features</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li><a href="#">Drop Menu 4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="#">Drop Menu 1</a></li>
+              <li><a href="#">Drop Menu 2</a></li>
+              <li><a href="#">Drop Menu 3</a></li>
+              <li>
+                <a href="#" class="desktop-link">More Items</a>
+                <input type="checkbox" id="show-items">
+                <label for="show-items">More Items</label>
+                <ul>
+                  <li><a href="#">Sub Menu 1</a></li>
+                  <li><a href="#">Sub Menu 2</a></li>
+                  <li><a href="#">Sub Menu 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+
+  <div class="dummy-text">
+      <br><br><br>
+      <br>
+      <br> <br> <br><br>
+      <br>
+      <br> <br> <br><br>
+      <br>
+      <br> <br> <br>
+      <br>
+      <br> <br> <br><br>
+      <br>
+      <br> <br> <br><br>
+      <br>
+      <br> <br> <br><br>
+      <br>
+      <br> <br> <br>
+      <br>
+      <br> <br> <br>
+    <h2>Responsive Dropdown Menu Bar with Searchbox</h2>
+    <h2>using only HTML & CSS - Flexbox</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti soluta eum cumque excepturi iste animi, ad commodi non tempore perspiciatis quas ipsa recusandae quam cupiditate sed, distinctio ipsam veritatis accusantium est praesentium dicta sunt! Dolorem error a nobis temporibus laboriosam architecto, corrupti voluptas, animi qui beatae iste eum tempora in soluta adipisci commodi dolor impedit? Nemo temporibus nisi alias illo asperiores, ab natus officia error exercitationem iste harum expedita rerum reprehenderit quod quisquam voluptates, laborum incidunt a tempore quo totam libero inventore distinctio obcaecati. Veritatis praesentium incidunt necessitatibus saepe perspiciatis, at laborum atque nisi? Minus veniam dolore id maiores repellat, deserunt doloremque atque adipisci fugit eveniet reiciendis, cupiditate similique rerum praesentium pariatur aliquam laboriosam tempora dolorum quas vitae voluptates obcaecati ratione quos accusantium? Blanditiis quo veniam perferendis aliquid. Officiis, perspiciatis a officia ea laborum ipsam, pariatur incidunt natus fugit deserunt repellat qui? Amet voluptatibus praesentium sapiente nobis repellat. Illo fuga quia nulla obcaecati veniam labore eligendi qui deleniti totam dignissimos vel beatae saepe, corporis ipsum sunt neque repellendus aliquam facere aut necessitatibus tempore placeat sed nostrum. Deserunt incidunt at provident, nemo ut alias aperiam ea reprehenderit consectetur rerum veniam a porro eligendi nam, quod aspernatur sunt corrupti magni? Aliquid ipsam laudantium reprehenderit? Soluta officia autem rem saepe, rerum veritatis pariatur sequi natus eos dolore quaerat aperiam asperiores inventore facere deserunt unde aut! Ullam natus reiciendis, quis modi quo, sit numquam ipsam suscipit exercitationem sapiente optio, libero eveniet cum debitis ipsa at ab porro? Minus ipsum laborum hic temporibus autem quo itaque cupiditate nostrum porro fugit in sapiente laudantium, dignissimos facilis. Nisi iusto iure maiores repellendus voluptatibus doloremque voluptatum corrupti ut, fugiat aliquid, asperiores illo odit adipisci neque odio ad repudiandae recusandae libero officia omnis nam pariatur consequuntur! Placeat ratione natus deserunt accusamus reiciendis voluptates nostrum obcaecati vitae repellat, voluptatum fugiat doloribus corrupti optio. Architecto at voluptas itaque suscipit quae reprehenderit quam temporibus reiciendis rem nisi error quibusdam hic, repellendus, minima delectus dolore et assumenda? Voluptatum impedit similique excepturi tenetur voluptatibus accusamus vero, dolor illum reiciendis odit officia rem a possimus hic quisquam perferendis repellat voluptate sequi! Eligendi dicta accusantium ut saepe, impedit dignissimos illum reiciendis eos repellendus distinctio hic sed facere nisi velit cumque quia perferendis quo libero laborum, assumenda voluptatum, totam fugiat. Odio sapiente porro dolorem tempora, nihil necessitatibus. Odit, quisquam quos fugit atque magnam doloribus nostrum odio inventore sunt perferendis quia error vel quis ex. Cum minima explicabo commodi ipsam exercitationem, doloremque sunt quidem aliquam, enim dicta, dolorum fuga ipsa laudantium alias ut. Facere, possimus? Qui exercitationem mollitia maxime, quis ducimus dolorem adipisci quo quae iste natus debitis, beatae sit, omnis delectus amet excepturi harum nobis enim saepe magni laboriosam dignissimos sequi? Porro deserunt tempora vel cum consectetur cumque, dicta delectus voluptates accusamus. Molestiae, similique aut? Sit odio, quos nulla cum aliquid perspiciatis incidunt eos provident dolores ab iste dignissimos consectetur perferendis ipsa quam culpa, voluptatum, a ipsum ad. Porro illo similique deserunt soluta tempore! Reprehenderit pariatur animi in quia nulla, ea accusamus distinctio expedita. Eaque ducimus praesentium delectus exercitationem quia iste inventore, ad nulla eius commodi facere quo. Aliquam aspernatur, magni aliquid rerum vel voluptate dolore tenetur sunt quisquam facere quod fugiat exercitationem. Ad dolor vel perspiciatis veniam. Laboriosam expedita debitis adipisci eum sit. Iusto doloremque odio quidem sapiente, quo eligendi veniam quae consectetur. Hic voluptatem, aperiam placeat nulla provident earum rerum aspernatur sed tenetur, sunt aut voluptas commodi molestias magnam ad. Est reprehenderit dolorum sunt at officiis quos ullam ab tempora repellat rem eaque optio, doloribus, modi dolor non. Amet, architecto repellat rerum neque repellendus deserunt asperiores nemo necessitatibus tempora sit, esse temporibus. Blanditiis adipisci assumenda excepturi corrupti. Non aspernatur voluptatibus labore ipsa minima eum iusto ipsum? Officiis placeat iste ipsam, quidem perferendis est temporibus. Consequuntur, quo officia dicta nobis maiores tempore quidem harum, aliquam modi, et deserunt autem? Dolorem assumenda iusto adipisci magni, numquam officia ipsa rem, est esse minus deleniti qui ducimus reiciendis ipsum inventore beatae sapiente nesciunt odio dolore dolorum recusandae fuga? Qui ipsam optio repudiandae, tempore blanditiis repellendus nihil ad quaerat fugiat cumque, maxime, cum omnis? Laudantium ad officia deserunt eligendi! Necessitatibus, velit quam laudantium nisi blanditiis facilis tempora architecto reiciendis praesentium sed maxime nam inventore consectetur commodi, non fuga eos sequi unde similique quod error doloremque libero! Maxime unde magni ullam atque placeat cumque sequi officia modi iste cupiditate inventore blanditiis quam id eaque veritatis distinctio labore, a culpa debitis. Eligendi odit obcaecati iusto quam aut numquam. Repellat, cumque, aperiam ea error numquam mollitia incidunt odio minima sapiente rerum vel. Nobis sed impedit nisi tenetur, ex voluptas sint perferendis labore, odit rerum facere nesciunt iure aut ipsam mollitia illum hic, consectetur assumenda iste veritatis explicabo eaque ut! Temporibus deleniti est illum, nobis, dolor velit tempore quibusdam voluptatum doloribus molestiae maxime dignissimos, assumenda minus pariatur quaerat vitae. Incidunt hic ratione illum natus totam quaerat amet dolorum voluptates corporis aut soluta dolor nulla corrupti, impedit ipsa, voluptas dolores, laborum veniam? Similique dolorem voluptates ducimus quo adipisci alias quia, hic doloribus, eos qui repellat tempore. Ipsa suscipit repellendus sit iste est tenetur, mollitia accusamus nobis, consequuntur animi dolor placeat quis beatae quas esse laboriosam quisquam totam, officia modi vero asperiores cumque deserunt perspiciatis eligendi. Distinctio ab debitis sint qui magni voluptatibus, dolorem earum amet aspernatur ipsam corporis molestias, corrupti consequatur quas tenetur, obcaecati minus ipsum quos ratione saepe assumenda quae. At neque nobis quas itaque sapiente adipisci deleniti inventore dolorem dolore, dignissimos provident autem nihil labore nam. Dolores enim fugiat commodi adipisci eius alias cupiditate possimus laborum ad aperiam nulla rem sunt, iusto placeat minima odio porro asperiores incidunt nostrum quae libero perspiciatis perferendis ea fugit! Nulla quas eius sed exercitationem maiores, pariatur sapiente earum? Laboriosam maxime unde deleniti iste nemo amet, quae sequi dolores in saepe, pariatur placeat porro, dicta cumque architecto minima voluptatum necessitatibus! Nesciunt laboriosam distinctio, sequi est obcaecati veniam quas repellat dignissimos. Assumenda recusandae esse nulla adipisci iusto facere doloremque neque, deleniti perferendis, quaerat minus! Quia quasi ratione at dicta consequuntur ad nam error velit impedit repudiandae, nisi, facilis dignissimos?
+    </p>
+  </div>
+
+</body>
+</html>
