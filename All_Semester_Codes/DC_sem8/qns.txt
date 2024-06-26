@@ -1,0 +1,57 @@
+desirable features of 
+1. a good msg passing system
+2. a global scheduling algo
+3. good dfs (naming schemes + naming services)
+
+
+issues in designing
+1. load balancing algorithms
+
+
+qos in som
+
+file acccessing models
+
+file caching
+ 
+What are file sharing semantics along with file caching schemes?
+
+How is file replication handled.
+
+different load estimation policies 
+How fault tolerance is build in a DFS
+
+
+What are transaction based file systems and its operations?
+
+Explain NFS and AFS.( Design and Compare)
+
+DNS and RR(Design)
+
+Explain GFS and , GFS cluster, Chubby and Big Table structure
+
+
+What is directory service X.500 
+
+
+What do you understand about memory coherence and consistency?
+
+What do you understand by eventual consistency?
+
+) what are the various approaches of replica consistency management: optimistic and pessimistic
+
+
+How is Task Assignment Approach different from Load balancing technique.(
+
+
+Give examples of applications for each type of resource management technique. (Justify
+with example)
+
+
+What is the Listen Accept combination of primitives defining in TCP IP communication
+model
+
+
+matrix of process to resource and resource to mc bidning
+
+why synch delay is 2t in maekawa
